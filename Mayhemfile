@@ -1,0 +1,5 @@
+project: rnshah9/mayhem-dev86
+target: ld86
+
+cmds:
+  - cmd: /dev86/bin/ld86 @@
