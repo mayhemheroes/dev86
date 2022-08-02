@@ -2,4 +2,4 @@ project: dev86
 target: ld86
 
 cmds:
-  - cmd: /dev86/bin/ld86 @@
+  - cmd: /install/bin/ld86 @@
