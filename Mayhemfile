@@ -1,0 +1,5 @@
+project: dev86
+target: ld86
+
+cmds:
+  - cmd: /install/bin/ld86 @@
