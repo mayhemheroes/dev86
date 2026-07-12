@@ -1,0 +1,14 @@
+project: dev86
+target: ld86
+
+# ld86 is the dev86/bcc linker. It parses MINIX/bcc a.out relocatable object files
+# (ld/readobj.c, ld/table.c, ld/typeconv.c) and writes a linked image. We fuzz the
+# object-file parser by handing ld86 a single input file and writing the linked output
+# to /tmp (the commit image is mounted read-only during coverage collection, so scratch
+# output must NOT go under /mayhem).
+cmds:
+  - cmd: /mayhem/ld86 -o /tmp/ld86.out @@
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ld86/testsuite
