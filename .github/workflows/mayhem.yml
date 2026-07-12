@@ -1,8 +1,6 @@
 name: Mayhem
 on:
-  push:
-  pull_request:
-  workflow_dispatch:
+  workflow_dispatch:   # archived branch: push/PR triggers disabled (two-branch port; Actions run only from `mayhem`)
 
 env:
   REGISTRY: ghcr.io
